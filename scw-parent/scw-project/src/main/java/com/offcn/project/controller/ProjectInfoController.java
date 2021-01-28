@@ -132,6 +132,7 @@ public class ProjectInfoController {
     @GetMapping("/returns/info/{returnId}")
     public AppResponse<TReturn> getTReturn(@PathVariable("returnId") Integer returnId){
         TReturn tReturn = projectInfoService.getReturnInfo(returnId);
+        System.out.println("测试");
         return AppResponse.ok(tReturn);
     }
 }
